@@ -38,7 +38,7 @@ note 記事（AI支援で1日1本）で、個人がどれくらい・どれく�
 |---|---|---|---|
 | 会員登録者数 | **1,248万人**（YoY+25.4%） | FY2026 2Q（2026年5月末） | [S3] |
 | 累計ユニーククリエイター数（過去に1回でも投稿したユーザー） | **241万人**（YoY+38.7%） | 同上 | [S3] |
-| 公開コンテンツ数 | 8,209万件（YoY+39.2%） | 同上 | [S3]（数値は[S16]経由で確認、YoYは[S3]本文） |
+| 公開コンテンツ数 | 8,209万件（YoY+39.2%） | 同上 | [S3] |
 | MAU（非会員を含む月間アクティブブラウザ） | **9,123万**（2025年12月〜2026年5月の平均） | 2026年7月 | [S3] |
 | 四半期GMV（流通総額） | **6,484百万円**（YoY+24.6%）。サブスク比率28.8% | FY2026 2Q（2026年3〜5月） | [S3] |
 | 四半期GMV（前期まで） | 4Q FY2025 5,608百万円／1Q FY2026 6,203百万円（YoY+25.0%） | 2026年1月・4月 | [S4][S10] |
@@ -174,7 +174,6 @@ note 記事（AI支援で1日1本）で、個人がどれくらい・どれく�
 - [S13] PR TIMES「note、約30万件の有料記事を分析」（2026-01-07） https://prtimes.jp/main/html/rd/p/000000360.000017890.html
 - [S14] マナミナ（ヴァリューズ）による [S13] の解説（2026-01-09） https://manamina.valuesccg.com/articles/4766
 - [S15] note コミュニティガイドライン https://www.help-note.com/hc/ja/articles/4409925863193
-- [S16] （[S3] の補足：公開コンテンツ数・会員数の数値は [S3] の本文と検索結果の要約で確認）
 - [S20] Google 検索セントラル「生成AIコンテンツに関するガイダンス」 https://developers.google.com/search/docs/fundamentals/using-gen-ai-content
 - [S21] Google 検索セントラル「スパムに関するポリシー」 https://developers.google.com/search/docs/essentials/spam-policies
 - [S22] YouTube ヘルプ「オートダビングを使用する」 https://support.google.com/youtube/answer/15569972?hl=ja

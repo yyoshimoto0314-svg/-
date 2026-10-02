@@ -1,47 +1,78 @@
 # ブランド・ペルソナ設定
+# 出典: 前回作った AI自動化サービス `note-article` スキル（「今日のnote」で起動）
 # 全エージェントがこの設定に従って書く・編集する。
 # サービス展開時は clients/<顧客名>/brand.yaml を作り、同じ形式で差し替える。
 
-brand_name: "（あなたのブランド名）"
+brand_name: "越境インプット"
+concept: "海外の一次情報を、日本語で、実験して届ける"
 
-# 誰に届けるか
 persona:
-  who: "20〜40代のビジネスパーソン・経営者・士業"
-  pain: "忙しくて学ぶ時間がない／海外の最新ノウハウを日本語で手早く知りたい"
-  want: "明日から使える具体的な行動・考え方"
+  who: "32歳男性・会社員・年収500万前後"
+  pain: "停滞感がある／自己投資したいが時間がない／英語コンテンツは見る気力がない"
+  want: "明日から動ける具体的な行動"
 
-# 何を届けるか
-themes:
-  - ビジネス・自己啓発
-  - 生産性・時間術
-  - AI活用・業務効率化
-  - マーケティング・営業
+promises:
+  - 海外ソース起点
+  - 実験ベース
+  - 明日から動ける形
 
-# どう届けるか
+# リサーチ（YouTube）
+research:
+  priority_channels:
+    - Chris Williamson (Modern Wisdom)
+    - Alex Hormozi
+    - Dan Koe
+    - Andrew Huberman
+    - Diary of a CEO
+    - Ali Abdaal
+    - Naval Ravikant
+    - Justin Sung
+    - Thomas Frank
+  candidates: 10            # 候補を10本探す
+  pillars: [3, 5]           # 柱にする動画は3〜5本（1動画1記事は禁止）
+  criteria_min: 3           # 下記のうち3つ以上を満たすものだけ採用
+  criteria:
+    - 公開6ヶ月以内
+    - 再生数10万以上
+    - 日本語で検索してもほぼ情報が出てこない（実際に日本語検索して確認・最重要）
+    - 具体的な手順・数字・実験が含まれる
+    - ペルソナの悩みに直接触れる
+  reject:
+    - モチベを煽るだけ
+    - 商品販売が主目的
+    - 出典のない断定が多い
+
 tone:
-  style: "です・ます調。やさしく、具体的に。専門用語は一言で言い換える"
-  person: "一人称は「私」"
+  style: "です・ます調。一文は短く。専門用語には注釈"
+  use_words: [停滞感, 時間の使い方, 複利, 〜の科学, 日本人があまり知らない, 1週間試した]
+  avoid_words: [意識高い, 丁寧な暮らし, 自分らしく, ワクワク, 〜と言えるでしょう, 〜が重要です]
   avoid:
-    - 煽り（「絶対」「必ず儲かる」など）
-    - 断定的な投資・税務・医療アドバイス
-    - 他者・他社の批判
+    - 煽り・断定・スピリチュアル表現
+    - 薬機法・景表法に触れる表現（特に体・美容テーマ）
 
-# note記事の型
 note:
-  length_chars: [3000, 5000]
-  structure:
-    - リード（悩みへの共感＋この記事で得られること）
-    - 本文（見出し3〜5個、各見出しに具体例）
-    - まとめ（今日からできる行動を3つ）
-  hashtags_max: 5
-  paid_section: false   # true にすると有料パートの区切りを入れる
+  max_per_day: 1            # note のスパム判定回避
+  templates:                # 同じ型を連投しない（ローテーション）
+    A: { name: 越境まとめ, chars: [2300, 2700] }
+    B: { name: 実験ログ, chars: [1200, 2000] }
+    C: { name: 本棚, chars: null, amazon_pr: true }
+  title_max_chars: 30
+  title_candidates: 5
+  self_written_placeholder: "【ここは自分で書く】"   # 体験談はAIが書かない
+  amazon_pr_notice: "※本記事にはAmazonアソシエイトリンクを含みます。"
+  post_times: ["平日 7:30", "12:15", "21:00"]
+  x_summary_chars: 140
+  review:
+    like_rate_pass: 0.03            # スキ÷ビュー 3%が合格
+    like_rate_alert: 0.02           # 2%未満が3本続いたら方向性を見直す
+    alert_streak: 3
 
-# 動画の型
+# 動画の型（動画編集部門）
 video:
   short:
     seconds: 60
     aspect: "9:16"
-    hook_seconds: 3     # 冒頭3秒で結論 or 問いかけ
+    hook_seconds: 3
   subtitles:
     font: "IPAGothic"
     font_size: 80

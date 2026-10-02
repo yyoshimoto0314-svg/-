@@ -1,0 +1,8 @@
+{
+  "output_dir": "output/example/text_video",
+  "steps": [
+    {"op": "from_srt", "srt": "video/samples/sample.srt", "background": "#0f172a"}
+  ],
+  "thumbnail": {"text": "朝5分の習慣", "at": 0.5},
+  "final_name": "short.mp4"
+}

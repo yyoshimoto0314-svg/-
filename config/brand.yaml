@@ -1,0 +1,52 @@
+# ブランド・ペルソナ設定
+# 全エージェントがこの設定に従って書く・編集する。
+# サービス展開時は clients/<顧客名>/brand.yaml を作り、同じ形式で差し替える。
+
+brand_name: "（あなたのブランド名）"
+
+# 誰に届けるか
+persona:
+  who: "20〜40代のビジネスパーソン・経営者・士業"
+  pain: "忙しくて学ぶ時間がない／海外の最新ノウハウを日本語で手早く知りたい"
+  want: "明日から使える具体的な行動・考え方"
+
+# 何を届けるか
+themes:
+  - ビジネス・自己啓発
+  - 生産性・時間術
+  - AI活用・業務効率化
+  - マーケティング・営業
+
+# どう届けるか
+tone:
+  style: "です・ます調。やさしく、具体的に。専門用語は一言で言い換える"
+  person: "一人称は「私」"
+  avoid:
+    - 煽り（「絶対」「必ず儲かる」など）
+    - 断定的な投資・税務・医療アドバイス
+    - 他者・他社の批判
+
+# note記事の型
+note:
+  length_chars: [3000, 5000]
+  structure:
+    - リード（悩みへの共感＋この記事で得られること）
+    - 本文（見出し3〜5個、各見出しに具体例）
+    - まとめ（今日からできる行動を3つ）
+  hashtags_max: 5
+  paid_section: false   # true にすると有料パートの区切りを入れる
+
+# 動画の型
+video:
+  short:
+    seconds: 60
+    aspect: "9:16"
+    hook_seconds: 3     # 冒頭3秒で結論 or 問いかけ
+  subtitles:
+    font: "IPAGothic"
+    font_size: 80
+  bgm_volume: 0.15
+  silence:
+    threshold_db: -35
+    min_silence_sec: 0.6
+    padding_sec: 0.15

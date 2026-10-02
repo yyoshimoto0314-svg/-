@@ -1,0 +1,9 @@
+# 成果物・素材（大きいファイルはGitに入れない）
+output/
+media/
+*.mp4
+*.mov
+*.mp3
+*.wav
+__pycache__/
+.venv/

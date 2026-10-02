@@ -1,0 +1,12 @@
+{
+  "input": "media/sample.mp4",
+  "output_dir": "output/example/video",
+  "steps": [
+    {"op": "cut_silence"},
+    {"op": "vertical", "mode": "blur"},
+    {"op": "subtitles", "srt": "video/samples/sample.srt"},
+    {"op": "bgm", "file": "media/bgm.mp3", "volume": 0.15}
+  ],
+  "thumbnail": {"text": "朝5分の習慣", "at": 1.0},
+  "final_name": "short.mp4"
+}
